@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <path d="M32 2 L42 12 L56 8 L56 22 L64 32 L56 42 L56 56 L42 52 L32 62 L22 52 L8 56 L8 42 L0 32 L8 22 L8 8 L22 12 Z" fill="#FF3B1D" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="14" y="18" width="36" height="28" fill="#121212" rx="3"/>
+  <text x="32" y="38" font-family="'Courier New', monospace" font-size="18" font-weight="900" fill="#D7FF2E" text-anchor="middle" letter-spacing="1">NG</text>
+</svg>

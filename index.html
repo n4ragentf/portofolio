@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NAARA GENTHA — DROP 001 / Merch Portfolio</title>
+  <meta name="description"
+    content="Personal portfolio & lookbook of Naara Gentha Shypra Wardana, RPL software engineering vocational student, web developer, and social media manager in Indonesia.">
+  <meta name="author" content="Naara Gentha Shypra Wardana">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NAARA GENTHA — DROP 001 Lookbook">
+  <meta property="og:description"
+    content="Siswa RPL · Social media manager · Web developer. Make your presence a gift that give through memories you leave behind.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="assets/img/favicon.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Subtle SVG Grain Overlay -->
+  <svg class="grain-overlay" aria-hidden="true">
+    <filter id="noiseFilter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
+    </filter>
+    <rect width="100%" height="100%" filter="url(#noiseFilter)" />
+  </svg>
+
+  <!-- Fixed Tag Navigation Bar -->
+  <header>
+    <nav class="site-nav" aria-label="Main Navigation">
+      <ul class="nav-links">
+        <li><a href="#drop" class="nav-tag brand-badge" data-i18n="nav_drop">DROP 001</a></li>
+        <li><a href="#items" class="nav-tag" data-i18n="nav_items">ITEMS</a></li>
+        <li><a href="#sizes" class="nav-tag" data-i18n="nav_sizes">SIZES</a></li>
+        <li><a href="#about" class="nav-tag" data-i18n="nav_about">ABOUT</a></li>
+        <li><a href="#contact" class="nav-tag" data-i18n="nav_contact">CONTACT</a></li>
+      </ul>
+
+      <!-- Language Toggle (ID | EN) -->
+      <div class="lang-toggle-group" id="lang-toggle" role="group" aria-label="Pilih Bahasa / Language Selection">
+        <button type="button" class="lang-btn active" id="lang-id-btn" data-lang="id" aria-pressed="true">ID</button>
+        <button type="button" class="lang-btn" id="lang-en-btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ==================== 1. HERO "DROP 001" ==================== -->
+    <section id="drop" class="hero-section section-paper" aria-labelledby="hero-title">
+      <div class="container">
+
+        <div class="hero-banner-strip">
+          <span>●</span>
+          <span data-i18n="hero_badge">DROP 001 / EDISI TERBATAS</span>
+        </div>
+
+        <div class="hero-wordmark-container">
+          <h1 id="hero-title" class="hero-wordmark" data-i18n="hero_title">NAARA GENTHA</h1>
+        </div>
+
+        <div class="hero-subline-box">
+          <p data-i18n="hero_sub">Siswa RPL · Social media manager · Web developer</p>
+        </div>
+
+        <!-- Hero Stage: Hang Tag & Rotated Die-Cut Portrait & Draggable Stickers -->
+        <div class="hero-stage" id="hero-stage">
+
+          <!-- Bio Hang Tag (Presence is a gift) -->
+          <div class="bio-hang-tag" id="bio-tag">
+            <div class="tag-eyelet" aria-hidden="true"></div>
+            <div class="tag-string" aria-hidden="true"></div>
+            <div class="tag-header">
+              <span>CERTIFICATE OF PRESENCE</span>
+              <span>BATCH 2026</span>
+            </div>
+            <p class="tag-bio-text" data-i18n="hero_bio">
+              "make your presence a gift that give through memories you leave behind"
+            </p>
+            <div class="tag-barcode" aria-hidden="true">
+              <span style="width: 4px;"></span>
+              <span style="width: 2px;"></span>
+              <span style="width: 6px;"></span>
+              <span style="width: 3px;"></span>
+              <span style="width: 8px;"></span>
+              <span style="width: 2px;"></span>
+              <span style="width: 5px;"></span>
+              <span style="width: 2px;"></span>
+              <span style="width: 9px;"></span>
+              <span style="width: 4px;"></span>
+              <span style="width: 3px;"></span>
+              <span style="width: 7px;"></span>
+              <span style="width: 2px;"></span>
+              <span style="width: 10px;"></span>
+              <span style="width: 4px;"></span>
+            </div>
+            <span class="drag-hint-badge" data-i18n="drag_hint">↑ geser stiker</span>
+          </div>
+
+          <!-- Formal Portrait Die-Cut Sticker (Red background echoes --signal) -->
+          <div class="hero-portrait-wrap">
+            <div class="diecut-portrait">
+              <img src="assets/img/portrait.webp" alt="Foto formal Naara Gentha dengan latar belakang merah" width="354"
+                height="472">
+              <div class="portrait-stamp">OFFICIAL VERIFIED</div>
+            </div>
+          </div>
+
+          <!-- 4 Draggable Text Stickers -->
+          <div class="draggable-sticker sticker-weird" id="sticker-1" data-rotation="-4deg" role="button" tabindex="0"
+            aria-label="Sticker 100% Weird" data-i18n="sticker_weird">
+            100% WEIRD
+          </div>
+
+          <div class="draggable-sticker sticker-hallo" id="sticker-2" data-rotation="5deg" role="button" tabindex="0"
+            aria-label="Sticker Hallo" data-i18n="sticker_hallo">
+            HALLO!
+          </div>
+
+          <div class="draggable-sticker sticker-limited" id="sticker-3" data-rotation="3deg" role="button" tabindex="0"
+            aria-label="Sticker Limited Only 1" data-i18n="sticker_limited">
+            LIMITED: ONLY 1
+          </div>
+
+          <div class="draggable-sticker sticker-code" id="sticker-4" data-rotation="-2deg" role="button" tabindex="0"
+            aria-label="Sticker Code and Content" data-i18n="sticker_code">
+            CODE + CONTENT
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 2. ITEMS (Projects as Merch Products) ==================== -->
+    <section id="items" class="section-ink" aria-labelledby="items-heading">
+      <div class="container">
+
+        <div class="section-header-wrap">
+          <span class="section-category-tag">CATALOGUE / LOOKBOOK</span>
+          <h2 id="items-heading" class="section-title" data-i18n="items_heading">CATALOGUE / ITEMS</h2>
+          <p class="section-subtitle" data-i18n="items_sub">
+            Semua proyek adalah produk dengan label gantung (hang tag). Ketuk atau arahkan kursor untuk membalik kartu.
+          </p>
+        </div>
+
+        <div class="items-grid">
+
+          <!-- ITEM 001: SIMULASI SNBT -->
+          <article class="product-card" tabindex="0" aria-label="Item 001: Simulasi SNBT">
+            <div class="card-inner">
+              <!-- Front Face -->
+              <div class="card-face card-front">
+                <div class="card-header-bar">
+                  <span class="sku-stamp" data-i18n="item1_sku">SKU: NGW-001</span>
+                  <span class="card-badge badge-solo">SOLO PROJECT</span>
+                </div>
+
+                <div class="product-media-box">
+                  <div class="code-art-box">
+                    <pre><code>// CBT EXAM ENGINE
+const exam = {
+  mode: "Guest",
+  timer: "Persistent",
+  autoSave: true,
+  storage: "LocalStorage"
+};
+console.log("Ready to test");</code></pre>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 class="product-title" data-i18n="item1_title">SIMULASI SNBT</h3>
+                  <p class="product-tagline" data-i18n="item1_tagline">Dikerjakan sendiri, semuanya.</p>
+                </div>
+
+                <button type="button" class="flip-prompt flip-trigger" aria-expanded="false" data-i18n="flip_hint">
+                  KETUK / KLIK UNTUK BALIK TAG ⟳
+                </button>
+              </div>
+
+              <!-- Back Face -->
+              <div class="card-face card-back">
+                <div>
+                  <div class="card-header-bar">
+                    <span class="sku-stamp" data-i18n="item1_sku">SKU: NGW-001</span>
+                    <span class="card-badge badge-solo">DETAILS</span>
+                  </div>
+
+                  <h3 class="back-title" data-i18n="item1_title">SIMULASI SNBT</h3>
+
+                  <ul class="back-spec-list">
+                    <li>
+                      <span class="back-spec-label" data-i18n="item1_role_label">PERAN:</span>
+                      <span data-i18n="item1_role_val">Pengembang Tunggal (Fullstack & UI)</span>
+                    </li>
+                    <li>
+                      <span class="back-spec-label" data-i18n="item1_desc_label">PROJEK APA INI:</span>
+                      <span data-i18n="item1_desc_val">Platform simulasi ujian CBT SNBT/UTBK lengkap dengan mode tamu
+                        tanpa login, timer real-time yang tidak reset saat refresh, penyimpanan otomatis progress di
+                        LocalStorage, sistem penilaian terpisah, serta pembahasan lengkap setiap soal.</span>
+                    </li>
+                    <li>
+                      <span class="back-spec-label" data-i18n="item1_stack_label">STACK TEKNOLOGI:</span>
+                      <span data-i18n="item1_stack_val">TanStack Start (React 19, TypeScript, Vite, Tailwind CSS v4,
+                        TanStack Query, Radix UI, Supabase)</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="back-action-group">
+                  <a href="https://github.com/n4ragentf/simulasi-snbt" target="_blank" rel="noopener noreferrer"
+                    class="btn-merch btn-merch-primary" data-i18n="repo_btn">
+                    Buka GitHub Repo ↗
+                  </a>
+                  <button type="button" class="btn-merch flip-trigger">⟲ Balik Depan</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ITEM 002: GURUPRO AI JOURNAL -->
+          <article class="product-card" tabindex="0" aria-label="Item 002: GuruPro AI Journal">
+            <div class="card-inner">
+              <!-- Front Face -->
+              <div class="card-face card-front">
+                <div class="card-header-bar">
+                  <span class="sku-stamp" data-i18n="item2_sku">SKU: NGW-002</span>
+                  <span class="card-badge badge-team">TEAM PROJECT</span>
+                </div>
+
+                <div class="product-media-box">
+                  <img src="assets/img/gurupro.webp" alt="Tangkapan layar dashboard web aplikasi GuruPro AI Journal"
+                    width="1200" height="887" loading="lazy">
+                </div>
+
+                <div>
+                  <h3 class="product-title" data-i18n="item2_title">GURUPRO AI JOURNAL</h3>
+                  <p class="product-tagline" data-i18n="item2_tagline">Proyek tim. Bagianku: social media management dan
+                    sedikit prompting.</p>
+                </div>
+
+                <button type="button" class="flip-prompt flip-trigger" aria-expanded="false" data-i18n="flip_hint">
+                  KETUK / KLIK UNTUK BALIK TAG ⟳
+                </button>
+              </div>
+
+              <!-- Back Face -->
+              <div class="card-face card-back">
+                <div>
+                  <div class="card-header-bar">
+                    <span class="sku-stamp" data-i18n="item2_sku">SKU: NGW-002</span>
+                    <span class="card-badge badge-team">DETAILS</span>
+                  </div>
+
+                  <h3 class="back-title" data-i18n="item2_title">GURUPRO AI JOURNAL</h3>
+
+                  <ul class="back-spec-list">
+                    <li>
+                      <span class="back-spec-label" data-i18n="item2_role_label">PERAN:</span>
+                      <span data-i18n="item2_role_val">Social Media Management & Sedikit Prompting (proyek tim, tidak
+                        menulis kode)</span>
+                    </li>
+                    <li>
+                      <span class="back-spec-label" data-i18n="item2_desc_label">PROJEK APA INI:</span>
+                      <span data-i18n="item2_desc_val">Aplikasi asisten administrasi untuk guru SMK guna menyusun jurnal
+                        mengajar harian secara otomatis berbasis bantuan AI.</span>
+                    </li>
+                    <li>
+                      <span class="back-spec-label" data-i18n="item2_stack_label">LINK & STATUS:</span>
+                      <span>Prototype v1 (Frontend live di Vercel)</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="back-action-group">
+                  <a href="https://gurupro-ai-journal.vercel.app" target="_blank" rel="noopener noreferrer"
+                    class="btn-merch btn-merch-primary" data-i18n="live_btn">
+                    Buka Web GuruPro ↗
+                  </a>
+                  <a href="https://github.com/novaragroup67/gurupro-ai-journal" target="_blank"
+                    rel="noopener noreferrer" class="btn-merch" data-i18n="repo_btn">
+                    GitHub Repo ↗
+                  </a>
+                  <button type="button" class="btn-merch flip-trigger">⟲ Balik Depan</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ITEM 003: EMPTY SLOT / NEXT DROP -->
+          <article class="empty-slot-card" aria-label="Item 003: In Production Next Drop">
+            <span class="sku-stamp" data-i18n="item3_sku">SKU: NGW-003</span>
+            <div class="empty-stamp" data-i18n="item3_title">IN PRODUCTION / NEXT DROP</div>
+            <p class="product-tagline" data-i18n="item3_tagline">Sedang dikerjakan. Belum rilis.</p>
+            <p style="font-family: var(--font-mono); font-size: 0.85rem; max-width: 260px; margin-top: 10px;"
+              data-i18n="item3_desc_val">
+              Slot kosong untuk proyek berikutnya. Tidak ada data fiktif di sini.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 3. SIZES (Skills & Languages as Clothing Labels) ==================== -->
+    <section id="sizes" class="section-paper" aria-labelledby="sizes-heading">
+      <div class="container">
+
+        <div class="section-header-wrap">
+          <span class="section-category-tag">SPECIFICATION / TAGS</span>
+          <h2 id="sizes-heading" class="section-title" data-i18n="sizes_heading">SPEC / SIZES</h2>
+          <p class="section-subtitle" data-i18n="sizes_sub">Label spesifikasi kain & kemampuan. Tanpa persentase buatan.
+          </p>
+        </div>
+
+        <div class="sizes-layout">
+
+          <!-- Sewn Clothing Specification Label -->
+          <div class="garment-label-card">
+            <h3 class="label-title" data-i18n="skills_title">KEAHLIAN TEKNIS / SKILLS</h3>
+
+            <div class="label-block">
+              <div class="spec-entry">
+                <span class="spec-name" data-i18n="skill_smm">Social media management</span>
+                <span class="spec-desc" data-i18n="skill_smm_desc">Perencanaan feed, produksi konten, dan pengelolaan
+                  akun.</span>
+                <span class="spec-tag">CORE COMPETENCY</span>
+              </div>
+
+              <div class="spec-entry">
+                <span class="spec-name" data-i18n="skill_web">Website development</span>
+                <span class="spec-desc" data-i18n="skill_web_desc">Membangun tampilan web yang fungsional dan
+                  responsif.</span>
+                <span class="spec-tag">CORE COMPETENCY</span>
+              </div>
+            </div>
+
+            <h3 class="label-title" style="margin-top: 26px;" data-i18n="tools_title">ALAT &amp; PERANGKAT / TOOLS</h3>
+
+            <div class="label-block">
+              <p class="spec-desc" style="margin-bottom: 10px;" data-i18n="tools_desc">Perangkat yang digunakan untuk merancang dan membangun website:</p>
+              <div class="tools-tag-cloud">
+                <span class="tool-chip">Lovable</span>
+                <span class="tool-chip">Figma</span>
+                <span class="tool-chip">Antigravity IDE</span>
+                <span class="tool-chip">VS Code</span>
+                <span class="tool-chip">Claude</span>
+                <span class="tool-chip">Gemini</span>
+                <span class="tool-chip">Windsurf</span>
+              </div>
+            </div>
+
+            <h3 class="label-title" style="margin-top: 26px;" data-i18n="lang_title">BAHASA / LANGUAGES</h3>
+
+            <div class="label-block">
+              <div class="spec-entry">
+                <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                  <span class="spec-name" data-i18n="lang_id_name">Bahasa Indonesia</span>
+                  <span class="spec-tag" data-i18n="lang_id_level">Native</span>
+                </div>
+              </div>
+
+              <div class="spec-entry">
+                <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                  <span class="spec-name" data-i18n="lang_en_name">English</span>
+                  <span class="spec-tag" data-i18n="lang_en_level">B1 (Skor TOEIC: 670)</span>
+                </div>
+              </div>
+
+              <div class="spec-entry">
+                <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                  <span class="spec-name" data-i18n="lang_de_name">Deutsch</span>
+                  <span class="spec-tag" data-i18n="lang_de_level">A1 (basics only)</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Working on Laptop Photo (Screen blurred for privacy) -->
+          <div>
+            <div class="photo-frame-taped">
+              <div class="photo-tape" aria-hidden="true"></div>
+              <img src="assets/img/working.webp"
+                alt="Naara Gentha sedang bekerja di depan laptop menyusun rencana konten" width="1000" height="1777"
+                loading="lazy">
+              <p class="photo-caption" data-i18n="photo_caption_work">Lagi nyusun konten.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 4. ABOUT (Care Label & Streetwear Polaroid) ==================== -->
+    <section id="about" class="section-paper" style="background-color: #ECE3CF;" aria-labelledby="about-heading">
+      <div class="container">
+
+        <div class="section-header-wrap">
+          <span class="section-category-tag">WASH INSTRUCTIONS</span>
+          <h2 id="about-heading" class="section-title" data-i18n="about_heading">CARE LABEL / ABOUT</h2>
+        </div>
+
+        <div class="about-grid">
+
+          <!-- Care Label Card -->
+          <div class="care-label-box">
+            <p class="lead-quote" data-i18n="about_lead">"Aku suka hal-hal yang aneh."</p>
+
+            <table class="care-table" aria-label="Instruksi Perawatan Produk Naara">
+              <tbody>
+                <tr>
+                  <td data-i18n="care_name_label">NAMA PRODUK:</td>
+                  <td data-i18n="care_name_val">Naara Gentha Shypra Wardana</td>
+                </tr>
+                <tr>
+                  <td data-i18n="care_status_label">STATUS:</td>
+                  <td data-i18n="care_status_val">Siswa RPL (Rekayasa Perangkat Lunak)</td>
+                </tr>
+                <tr>
+                  <td data-i18n="care_wash_label">CARA MERAWAT:</td>
+                  <td data-i18n="care_wash_val">Cuci bersama hal-hal aneh lainnya.</td>
+                </tr>
+                <tr>
+                  <td data-i18n="care_dry_label">PENGERINGAN:</td>
+                  <td data-i18n="care_dry_val">Keringkan di bawah cahaya matahari langsung & ide-ide nyeleneh.</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- WEIRD THINGS I LIKE (Filled with Naara's direct input) -->
+            <div style="border-top: var(--border-thick); padding-top: 20px; margin-top: 20px;">
+              <h3 style="font-family: var(--font-display); font-size: 1.15rem; margin-bottom: 10px;"
+                data-i18n="weird_title">
+                WEIRD THINGS I LIKE:
+              </h3>
+              <ul class="weird-things-list">
+                <li class="weird-tag-item" data-i18n="weird_item1">Glazer harum manis &amp; Frank Ocean</li>
+                <li class="weird-tag-item" data-i18n="weird_item2">Mempunyai banyak obsesi</li>
+                <li class="weird-tag-item" data-i18n="weird_item3">Freaky</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Visuals: Taped Polaroid + Duotone Candid -->
+          <div class="visuals-stack">
+
+            <!-- Mirror Selfie as Taped Polaroid (Cropped tightly to Naara only) -->
+            <div class="polaroid-card">
+              <div class="photo-tape" aria-hidden="true" style="top: -10px; width: 90px; height: 22px;"></div>
+              <img src="assets/img/mirror.webp"
+                alt="Foto polaroid mirror selfie Naara Gentha mengenakan bucket hat dan sweater cokelat" width="600"
+                height="1367" loading="lazy">
+              <p class="polaroid-text" data-i18n="polaroid_label">Naara Gentha — Mirror Polaroid</p>
+            </div>
+
+            <!-- Blurry Candid in Duotone (Ink #121212 + Signal #FF3B1D) -->
+            <div class="duotone-candid-card">
+              <img src="assets/img/blur.webp" alt="Foto candid Naara Gentha dalam efek duotone merah signal dan hitam"
+                width="800" height="533" loading="lazy">
+              <p class="candid-caption" data-i18n="candid_caption">Buram. Tetap aku.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 5. REVIEWS (Zero-state Streetwear Box) ==================== -->
+    <section id="reviews" class="section-signal" aria-labelledby="reviews-heading">
+      <div class="container">
+
+        <div class="reviews-box">
+          <div class="reviews-badge" data-i18n="reviews_count">ULASAN (0)</div>
+          <p class="reviews-message" data-i18n="reviews_empty">
+            belum ada. Jadilah yang pertama, DM di Instagram.
+          </p>
+          <a href="https://instagram.com/naaragenthasikma67" target="_blank" rel="noopener noreferrer"
+            class="btn-merch btn-merch-primary" data-i18n="reviews_cta">
+            Kirim Ulasan via Instagram DM ↗
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 6. CONTACT (Shipping Manifest Label) ==================== -->
+    <section id="contact" class="section-paper" aria-labelledby="contact-heading">
+      <div class="container">
+
+        <div class="shipping-manifest">
+
+          <div class="shipping-header">
+            <h2 id="contact-heading" data-i18n="contact_heading">SHIPPING LABEL / CONTACT</h2>
+            <span class="shipping-badge" data-i18n="service_val">EXPRESS COLLABORATION</span>
+          </div>
+
+          <div class="shipping-grid">
+            <div class="shipping-cell">
+              <span class="shipping-label" data-i18n="ship_to_label">KIRIM KE (SHIP TO):</span>
+              <span class="shipping-value" data-i18n="ship_to_val">Kamu (Teman / Guru / Dosen / Rekan Kerja)</span>
+            </div>
+
+            <div class="shipping-cell">
+              <span class="shipping-label" data-i18n="from_label">DARI (FROM):</span>
+              <span class="shipping-value" data-i18n="from_val">Naara Gentha Shypra Wardana</span>
+            </div>
+          </div>
+
+          <!-- Email with tactile Copy Button -->
+          <div class="shipping-email-row">
+            <span class="shipping-label">EMAIL ADDRESS:</span>
+            <div class="email-copy-container">
+              <span class="email-display-text" id="email-address">naaragentha@gmail.com</span>
+              <button type="button" class="btn-copy" id="copy-email-btn" aria-label="Salin alamat email ke papan klip"
+                data-i18n="copy_email">
+                SALIN
+              </button>
+            </div>
+          </div>
+
+          <!-- Direct Channels (Strictly Instagram & GitHub; No phone/address/school) -->
+          <div class="channels-row">
+            <span class="shipping-label" style="width: 100%;" data-i18n="contact_direct">HUBUNGI LANGSUNG:</span>
+
+            <a href="https://instagram.com/naaragenthasikma67" target="_blank" rel="noopener noreferrer"
+              class="channel-tag-btn">
+              <span>[IG] Instagram:</span>
+              <span>@naaragenthasikma67 ↗</span>
+            </a>
+
+            <a href="https://github.com/n4ragentf" target="_blank" rel="noopener noreferrer" class="channel-tag-btn">
+              <span>[GH] GitHub:</span>
+              <span>n4ragentf ↗</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-thanks-line" data-i18n="footer_thanks">Terima kasih · Thank you · Danke</p>
+      <div>
+        <span class="footer-bye-badge" data-i18n="footer_bye">Tschüss!</span>
+      </div>
+      <p class="footer-legal">
+        &copy; 2026 Naara Gentha Shypra Wardana. <span data-i18n="footer_drop">DROP 001 / BATCH 2026. SEMUA HAK CIPTA
+          DILINDUNGI.</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

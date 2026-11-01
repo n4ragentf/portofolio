@@ -1,0 +1,6 @@
+assets/originals/
+reference/
+screenshots/
+*.md
+!README.md
+!DESIGN.md
