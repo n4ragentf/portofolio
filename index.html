@@ -1,578 +1,324 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NAARA GENTHA — DROP 001 / Merch Portfolio</title>
-  <meta name="description"
-    content="Personal portfolio & lookbook of Naara Gentha Shypra Wardana, RPL software engineering vocational student, web developer, and social media manager in Indonesia.">
-  <meta name="author" content="Naara Gentha Shypra Wardana">
-
-  <!-- Open Graph / Meta -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="NAARA GENTHA — DROP 001 Lookbook">
-  <meta property="og:description"
-    content="Siswa RPL · Social media manager · Web developer. Make your presence a gift that give through memories you leave behind.">
-  <meta property="og:image" content="assets/img/og-image.png">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-  <link rel="alternate icon" type="image/png" href="assets/img/favicon.png">
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Naara Gentha — Drop 001</title>
+<meta name="description" content="Portofolio Naara Gentha: siswa RPL, social media manager, dan web developer. / Portfolio of Naara Gentha: RPL student, social media manager, web developer.">
+<meta property="og:title" content="Naara Gentha — Drop 001">
+<meta property="og:description" content="Social media management + website dev. I like weird things.">
+<meta property="og:image" content="https://portofolio-naara.vercel.app/assets/img/og-image.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%23FF3B1D' stroke='%23121212' stroke-width='5'/%3E%3Ccircle cx='32' cy='32' r='9' fill='%23D7FF2E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Dela+Gothic+One&family=Familjen+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F1E9D8;--ink:#121212;--signal:#FF3B1D;--acid:#D7FF2E;--d:'Dela Gothic One','Arial Black',Impact,sans-serif;--m:'Courier Prime','Courier New',monospace}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:400 1.0625rem/1.55 'Familjen Grotesk',system-ui,sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.07;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
+.ink :focus-visible,.signal :focus-visible,nav :focus-visible{outline-color:var(--acid)}
+section{padding:clamp(3rem,8vw,6rem) clamp(1rem,5vw,4rem);position:relative}
+.ink{background:var(--ink);color:var(--paper)}.signal{background:var(--signal)}.acid{background:var(--acid)}
+h2{font:400 clamp(2.6rem,9vw,6rem)/.95 var(--d);text-transform:uppercase;margin-bottom:2rem}
+.todo{background:#fff;color:#c00;border:2px dashed #c00;padding:0 .4em;font:700 .85rem var(--m)}
+nav{position:sticky;top:0;z-index:40;display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;justify-content:space-between;padding:.6rem clamp(1rem,5vw,4rem);background:var(--ink);color:var(--paper);font:700 .9rem var(--m)}
+nav div{display:flex;gap:.5rem;flex-wrap:wrap}
+nav a,nav button{min-height:44px;display:inline-flex;align-items:center;padding:0 .8rem;border:2px solid var(--paper);background:none;color:inherit;font:inherit;text-decoration:none;cursor:pointer}
+nav a:hover,nav button[aria-pressed=true]{background:var(--acid);color:var(--ink);border-color:var(--acid)}
+nav a:nth-child(odd){transform:rotate(-1.5deg)}nav a:nth-child(even){transform:rotate(1.5deg)}
+/* hero */
+.hero{display:grid;gap:2rem;grid-template-columns:1fr;padding-top:clamp(2rem,5vw,4rem);overflow:hidden}
+@media(min-width:820px){.hero{grid-template-columns:1.25fr 1fr;align-items:center}}
+h1{font:400 clamp(3.4rem,15vw,10.5rem)/.85 var(--d);text-transform:uppercase;text-shadow:0 0 0 var(--acid),var(--sx,6px) var(--sy,6px) 0 var(--signal);animation:reg 1.1s cubic-bezier(.2,1.3,.4,1);word-break:break-word}
+h1 span{display:block}h1 span+span{margin-left:.35em}
+.sub{margin-top:1.8rem;font-size:1.25rem;font-weight:600;max-width:28ch}
+.stage{position:relative;min-height:430px}
+.portrait{width:min(78%,310px);margin:1.5rem 0 0 6%;border:7px solid #fff;border-radius:42% 58% 46% 54%/52% 46% 54% 48%;box-shadow:8px 8px 0 var(--ink);transform:rotate(-4deg);aspect-ratio:3/4;object-fit:cover}
+.gift{position:absolute;right:0;top:0;width:min(200px,52%);background:var(--acid);border:3px solid var(--ink);padding:1.6rem .9rem .9rem;font:400 .9rem/1.35 var(--m);transform-origin:50% -12px;transform:rotate(5deg);box-shadow:5px 5px 0 var(--ink);animation:swing 3s ease-in-out 2 alternate}
+.gift::before{content:"";position:absolute;top:8px;left:50%;width:14px;height:14px;margin-left:-7px;border:3px solid var(--ink);border-radius:50%;background:var(--paper)}
+.gift:hover{animation:swing 1.6s ease-in-out infinite alternate}
+.gift b{display:block;margin-top:.5rem;font-size:.8rem}
+@keyframes swing{from{transform:rotate(1deg)}to{transform:rotate(9deg)}}
+.sticker{position:absolute;padding:.45rem .9rem;border:3px solid var(--ink);border-radius:999px;font:400 1rem var(--d);cursor:grab;touch-action:none;user-select:none;box-shadow:4px 4px 0 var(--ink);white-space:nowrap}
+.sticker:active{cursor:grabbing}
+/* items */
+.grid{display:grid;gap:2.2rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr))}
+.tag:nth-child(1){transform:rotate(-1.2deg)}.tag:nth-child(2){transform:rotate(1deg)}
+.tag h3{font:400 1.7rem/1 var(--d);text-transform:uppercase}
+.tag img{border:3px solid var(--ink)}
+/* sizes */
+.labels{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));margin-bottom:2.5rem}
+.lab{border:3px dashed var(--ink);padding:1rem 1.2rem;background:var(--acid);display:flex;align-items:center;gap:1rem;font-weight:600}
+.lab i{font:400 2.4rem/1 var(--d);font-style:normal;min-width:2.6ch}
+.lab small{display:block;font:400 .9rem var(--m)}
+.work{max-width:420px;margin:0 0 0 clamp(0rem,4vw,3rem);border:7px solid #fff;box-shadow:8px 8px 0 var(--ink);transform:rotate(2deg);position:relative}
+.work figcaption{padding:.5rem .3rem 0;color:var(--ink);font:400 .95rem var(--m);background:#fff}
+/* about */
+.about{display:grid;gap:2.5rem;grid-template-columns:1fr}
+@media(min-width:820px){.about{grid-template-columns:1.1fr 1fr}}
+.lead{font:400 clamp(2rem,6vw,3.6rem)/1 var(--d);margin-bottom:1.5rem}
+.pics{position:relative;min-height:480px}
+.pola{width:min(72%,300px);background:#fff;padding:.6rem .6rem 2.4rem;box-shadow:6px 6px 0 var(--ink);transform:rotate(-3deg)}
+.pola img{aspect-ratio:4/5;object-fit:cover;object-position:center top;width:100%}
+.duo{position:absolute;right:0;bottom:0;width:min(62%,260px);background:var(--acid);border:3px solid var(--ink);transform:rotate(4deg);box-shadow:6px 6px 0 var(--ink)}
+.duo img{filter:grayscale(1) contrast(1.15);mix-blend-mode:multiply;aspect-ratio:4/3;object-fit:cover;width:100%}
+.duo p{background:#fff;padding:.3rem .5rem;font:400 .85rem var(--m)}
+/* contact */
+footer{background:var(--signal);padding:2.5rem clamp(1rem,5vw,4rem);border-top:4px solid var(--ink)}
+footer p:first-child{font:400 clamp(1.8rem,6vw,3.6rem)/1.05 var(--d)}
+footer p+p{margin-top:1rem;font:400 .95rem var(--m)}
+.recs{display:flex;gap:1.4rem;flex-wrap:wrap;margin-top:1rem}
+.rec{width:min(46%,180px);transform:rotate(-3deg)}.rec+.rec{transform:rotate(3deg);margin-top:.8rem}
+.sl{position:relative;aspect-ratio:1;border:3px solid var(--ink);background:var(--acid);display:grid;place-items:center;padding:.4rem;text-align:center;font:400 1.15rem/1.1 var(--d);box-shadow:5px 5px 0 var(--ink);overflow:hidden}
+.sl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.rec figcaption{font:400 .85rem var(--m);margin-top:.5rem}
+.tools{display:flex;flex-wrap:wrap;gap:1rem 1.3rem;align-items:center;margin:0 0 2.5rem}
+.tool{width:clamp(56px,17vw,88px);aspect-ratio:1;display:grid;place-items:center;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink)}
+.tool svg,.tool img{width:58%;height:58%;object-fit:contain}
+.tool b{display:none;font:400 1.5rem var(--d)}
+.tool:nth-child(1){transform:rotate(-8deg);border-radius:50%}.tool:nth-child(2){transform:rotate(6deg) translateY(10px)}.tool:nth-child(3){transform:rotate(-3deg);border-radius:18px}.tool:nth-child(4){transform:rotate(9deg) translateY(-8px);border-radius:50%}.tool:nth-child(5){transform:rotate(-6deg)}.tool:nth-child(6){transform:rotate(4deg) translateY(12px);border-radius:50%}.tool:nth-child(7){transform:rotate(-10deg);border-radius:18px}
+.tag{position:relative;perspective:1400px;display:block}
+.card{display:grid;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.35,1.35,.5,1)}
+.tag.flipped .card{transform:rotateY(180deg)}
+.face{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;flex-direction:column;gap:.8rem;padding:1.3rem;border:3px solid var(--ink);transition:visibility 0s linear .4s}
+.front{background:var(--paper);color:var(--ink);box-shadow:7px 7px 0 var(--acid);padding-top:2.6rem;cursor:pointer;position:relative}
+.front::before{content:"";position:absolute;top:10px;left:50%;width:16px;height:16px;margin-left:-8px;border:3px solid var(--ink);border-radius:50%;background:var(--ink)}
+.back{background:#171717;color:var(--paper);border-color:var(--paper);transform:rotateY(180deg);visibility:hidden}
+.tag.flipped .back{visibility:visible}.tag.flipped .front{visibility:hidden}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem}
+.chip{font:700 .8rem var(--m);padding:.3rem .6rem;background:var(--acid);color:var(--ink)}
+.chip.sig{background:var(--signal);color:#fff}
+.back h3{color:var(--acid)}
+.back dt{color:var(--signal);font:700 .9rem var(--m);text-transform:uppercase;margin-top:.5rem}
+.back dd{font:400 .95rem/1.5 var(--m)}
+.back hr{border:0;border-top:1px dotted rgba(241,233,216,.35);margin-top:auto}
+.acts{display:flex;flex-wrap:wrap;gap:.8rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:.5rem 1rem;border:3px solid var(--paper);background:var(--paper);color:var(--ink);font:700 1rem var(--m);text-decoration:none;cursor:pointer;box-shadow:4px 4px 0 rgba(241,233,216,.55)}
+.btn.pri{background:var(--signal);color:#fff;border-color:#fff}
+.front .btn{align-self:flex-start;margin-top:auto;box-shadow:4px 4px 0 var(--ink)}
+.tag.empty{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;text-align:center;color:var(--paper);padding:1rem}
+.stamp{border:5px solid var(--signal);color:var(--signal);font:400 clamp(1.5rem,4vw,2.2rem)/1.05 var(--d);text-transform:uppercase;padding:1rem 1.2rem;transform:rotate(-6deg);margin:1rem 0}
+.wash{display:inline-block;background:var(--acid);border:3px solid var(--ink);padding:.3rem .8rem;font:700 .9rem var(--m);transform:rotate(-2deg);box-shadow:3px 3px 0 var(--ink);margin-bottom:1rem}
+.carecard{background:#F7F1E3;border:3px solid var(--ink);box-shadow:8px 8px 0 var(--ink);padding:clamp(1rem,4vw,2rem)}
+.carecard .lead{color:var(--signal);text-transform:uppercase;margin-bottom:1.2rem}
+.wt{width:100%;border-collapse:collapse;font:400 .95rem/1.4 var(--m)}
+.wt th,.wt td{text-align:left;padding:.7rem .4rem;border-bottom:1px solid rgba(18,18,18,.25);vertical-align:top}
+.wt th{width:34%;text-transform:uppercase}
+.wtitle{font:400 1.4rem/1.1 var(--d);text-transform:uppercase;margin:1.4rem 0 .8rem;padding-top:1.2rem;border-top:4px solid var(--ink)}
+.weird{list-style:none;padding:0;display:flex;flex-direction:column;align-items:flex-start;gap:.8rem}
+.weird li{font:700 .95rem var(--m);padding:.5rem .8rem;border:3px solid var(--ink);box-shadow:3px 3px 0 var(--ink);background:var(--paper)}
+.weird li:nth-child(1){background:var(--acid);transform:rotate(-1.5deg)}.weird li:nth-child(2){transform:rotate(1deg)}.weird li:nth-child(3){background:var(--signal);color:#fff;transform:rotate(-1deg)}
+.pola{position:relative}.pola::before{content:"";position:absolute;top:-14px;left:50%;width:90px;height:26px;margin-left:-45px;background:#d9cdb2;transform:rotate(-2deg)}
+.rev{text-align:center}
+.rev h2{display:inline-block;background:var(--ink);color:var(--acid);font-size:clamp(1.8rem,6vw,3rem);padding:.4rem 1rem;transform:rotate(-2deg);margin-bottom:1.2rem;box-shadow:5px 5px 0 var(--signal)}
+.revp{font:700 1.1rem var(--m);margin-bottom:1.5rem}
+.rev .btn{box-shadow:4px 4px 0 var(--ink);border-color:#fff}
+.ship{background:#F7F1E3;color:var(--ink);border:4px solid var(--paper);box-shadow:8px 8px 0 var(--signal);max-width:900px}
+.sh{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:space-between;align-items:center;background:var(--signal);border-bottom:4px solid var(--ink);padding:1rem 1.2rem}
+.sh h2{font-size:clamp(1.4rem,4.5vw,2.3rem);margin:0;color:#fff}
+.xp{background:var(--ink);color:var(--acid);font:700 .8rem var(--m);padding:.4rem .7rem}
+.cells{padding:1rem 1.2rem;border-bottom:4px solid var(--ink)}.cells:last-child{border-bottom:0}
+.two{display:grid;grid-template-columns:1fr;padding:0}
+.two>div{padding:1rem 1.2rem}.two>div+div{border-top:4px solid var(--ink)}
+@media(min-width:640px){.two{grid-template-columns:1fr 1fr}.two>div+div{border-top:0;border-left:4px solid var(--ink)}}
+.lb{display:block;font:700 .85rem var(--m);color:#C8240C;text-transform:uppercase;margin-bottom:.5rem}
+.ship p{font:700 1.05rem/1.5 var(--m)}
+.em{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between}
+.em span{font:700 clamp(1rem,3.4vw,1.5rem) var(--m);word-break:break-all}
+.em button{background:var(--ink);color:var(--paper);border:0;min-height:44px;padding:0 1.2rem;font:700 .9rem var(--m);cursor:pointer;box-shadow:4px 4px 0 var(--signal);text-transform:uppercase}
+.chs{display:flex;flex-wrap:wrap;gap:1rem}
+.chs a{display:inline-flex;align-items:center;min-height:44px;padding:0 1rem;border:3px solid var(--ink);color:var(--ink);font:700 .95rem var(--m);text-decoration:none;box-shadow:4px 4px 0 var(--ink)}
+@media(max-width:560px){nav{gap:.3rem;font-size:.8rem}nav a,nav button{padding:0 .55rem}h1{--sx:4px;--sy:4px}.stage{min-height:min(118vw,480px)}.portrait{width:70%;margin-left:2%}.gift{width:46%;font-size:.78rem;padding:1.5rem .6rem .7rem}.sticker{font-size:.85rem;padding:.35rem .7rem}.face{padding:1rem}.front{padding-top:2.4rem}.tag h3{font-size:1.4rem}.pics{min-height:420px}.ship{padding:1.4rem 1rem;outline-offset:-8px}.row span{min-width:0;flex-basis:100%}.row{word-break:break-word}.work{margin-left:0;max-width:92%}}
+@keyframes reg{0%{text-shadow:-24px 14px 0 var(--acid),26px -12px 0 var(--signal)}100%{text-shadow:0 0 0 var(--acid),var(--sx,6px) var(--sy,6px) 0 var(--signal)}}
+@keyframes slap{0%{scale:2.4;opacity:0}55%{scale:.9;opacity:1}100%{scale:1}}
+.portrait,.sticker{animation:slap .7s cubic-bezier(.3,1.5,.5,1) backwards}
+.portrait{animation-delay:.2s}
+.sticker:nth-of-type(1){animation-delay:.6s}.sticker:nth-of-type(2){animation-delay:.8s}.sticker:nth-of-type(3){animation-delay:1s}.sticker:nth-of-type(4){animation-delay:1.2s}
+.tag{transform-origin:50% 14px}
+.tag.pre{opacity:0}
+.tag.drop{animation:drop 1s cubic-bezier(.3,1.2,.5,1) backwards}
+@keyframes drop{0%{translate:0 -70px;rotate:-20deg;opacity:0}35%{opacity:1}60%{translate:0 0;rotate:9deg}80%{rotate:-3deg}100%{rotate:0deg}}
+.tool{cursor:pointer;transition:rotate .6s cubic-bezier(.3,1.6,.5,1),scale .3s}
+.tool:hover,.tool.spin{rotate:360deg;scale:1.12}
+.sl{transition:transform .35s cubic-bezier(.3,1.6,.5,1)}.rec:hover .sl{transform:translateY(-10px) rotate(-5deg)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
 </head>
-
 <body>
-
-  <!-- Subtle SVG Grain Overlay -->
-  <svg class="grain-overlay" aria-hidden="true">
-    <filter id="noiseFilter">
-      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
-    </filter>
-    <rect width="100%" height="100%" filter="url(#noiseFilter)" />
-  </svg>
-
-  <!-- Fixed Tag Navigation Bar -->
-  <header>
-    <nav class="site-nav" aria-label="Main Navigation">
-      <ul class="nav-links">
-        <li><a href="#drop" class="nav-tag brand-badge" data-i18n="nav_drop">DROP 001</a></li>
-        <li><a href="#items" class="nav-tag" data-i18n="nav_items">ITEMS</a></li>
-        <li><a href="#sizes" class="nav-tag" data-i18n="nav_sizes">SIZES</a></li>
-        <li><a href="#about" class="nav-tag" data-i18n="nav_about">ABOUT</a></li>
-        <li><a href="#contact" class="nav-tag" data-i18n="nav_contact">CONTACT</a></li>
-      </ul>
-
-      <!-- Language Toggle (ID | EN) -->
-      <div class="lang-toggle-group" id="lang-toggle" role="group" aria-label="Pilih Bahasa / Language Selection">
-        <button type="button" class="lang-btn active" id="lang-id-btn" data-lang="id" aria-pressed="true">ID</button>
-        <button type="button" class="lang-btn" id="lang-en-btn" data-lang="en" aria-pressed="false">EN</button>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <!-- ==================== 1. HERO "DROP 001" ==================== -->
-    <section id="drop" class="hero-section section-paper" aria-labelledby="hero-title">
-      <div class="container">
-
-        <div class="hero-banner-strip">
-          <span>●</span>
-          <span data-i18n="hero_badge">DROP 001 / EDISI TERBATAS</span>
-        </div>
-
-        <div class="hero-wordmark-container">
-          <h1 id="hero-title" class="hero-wordmark" data-i18n="hero_title">NAARA GENTHA</h1>
-        </div>
-
-        <div class="hero-subline-box">
-          <p data-i18n="hero_sub">Siswa RPL · Social media manager · Web developer</p>
-        </div>
-
-        <!-- Hero Stage: Hang Tag & Rotated Die-Cut Portrait & Draggable Stickers -->
-        <div class="hero-stage" id="hero-stage">
-
-          <!-- Bio Hang Tag (Presence is a gift) -->
-          <div class="bio-hang-tag" id="bio-tag">
-            <div class="tag-eyelet" aria-hidden="true"></div>
-            <div class="tag-string" aria-hidden="true"></div>
-            <div class="tag-header">
-              <span>CERTIFICATE OF PRESENCE</span>
-              <span>BATCH 2026</span>
-            </div>
-            <p class="tag-bio-text" data-i18n="hero_bio">
-              "make your presence a gift that give through memories you leave behind"
-            </p>
-            <div class="tag-barcode" aria-hidden="true">
-              <span style="width: 4px;"></span>
-              <span style="width: 2px;"></span>
-              <span style="width: 6px;"></span>
-              <span style="width: 3px;"></span>
-              <span style="width: 8px;"></span>
-              <span style="width: 2px;"></span>
-              <span style="width: 5px;"></span>
-              <span style="width: 2px;"></span>
-              <span style="width: 9px;"></span>
-              <span style="width: 4px;"></span>
-              <span style="width: 3px;"></span>
-              <span style="width: 7px;"></span>
-              <span style="width: 2px;"></span>
-              <span style="width: 10px;"></span>
-              <span style="width: 4px;"></span>
-            </div>
-            <span class="drag-hint-badge" data-i18n="drag_hint">↑ geser stiker</span>
-          </div>
-
-          <!-- Formal Portrait Die-Cut Sticker (Red background echoes --signal) -->
-          <div class="hero-portrait-wrap">
-            <div class="diecut-portrait">
-              <img src="assets/img/portrait.webp" alt="Foto formal Naara Gentha dengan latar belakang merah" width="354"
-                height="472">
-              <div class="portrait-stamp">OFFICIAL VERIFIED</div>
-            </div>
-          </div>
-
-          <!-- 4 Draggable Text Stickers -->
-          <div class="draggable-sticker sticker-weird" id="sticker-1" data-rotation="-4deg" role="button" tabindex="0"
-            aria-label="Sticker 100% Weird" data-i18n="sticker_weird">
-            100% WEIRD
-          </div>
-
-          <div class="draggable-sticker sticker-hallo" id="sticker-2" data-rotation="5deg" role="button" tabindex="0"
-            aria-label="Sticker Hallo" data-i18n="sticker_hallo">
-            HALLO!
-          </div>
-
-          <div class="draggable-sticker sticker-limited" id="sticker-3" data-rotation="3deg" role="button" tabindex="0"
-            aria-label="Sticker Limited Only 1" data-i18n="sticker_limited">
-            LIMITED: ONLY 1
-          </div>
-
-          <div class="draggable-sticker sticker-code" id="sticker-4" data-rotation="-2deg" role="button" tabindex="0"
-            aria-label="Sticker Code and Content" data-i18n="sticker_code">
-            CODE + CONTENT
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== 2. ITEMS (Projects as Merch Products) ==================== -->
-    <section id="items" class="section-ink" aria-labelledby="items-heading">
-      <div class="container">
-
-        <div class="section-header-wrap">
-          <span class="section-category-tag">CATALOGUE / LOOKBOOK</span>
-          <h2 id="items-heading" class="section-title" data-i18n="items_heading">CATALOGUE / ITEMS</h2>
-          <p class="section-subtitle" data-i18n="items_sub">
-            Semua proyek adalah produk dengan label gantung (hang tag). Ketuk atau arahkan kursor untuk membalik kartu.
-          </p>
-        </div>
-
-        <div class="items-grid">
-
-          <!-- ITEM 001: SIMULASI SNBT -->
-          <article class="product-card" tabindex="0" aria-label="Item 001: Simulasi SNBT">
-            <div class="card-inner">
-              <!-- Front Face -->
-              <div class="card-face card-front">
-                <div class="card-header-bar">
-                  <span class="sku-stamp" data-i18n="item1_sku">SKU: NGW-001</span>
-                  <span class="card-badge badge-solo">SOLO PROJECT</span>
-                </div>
-
-                <div class="product-media-box">
-                  <div class="code-art-box">
-                    <pre><code>// CBT EXAM ENGINE
-const exam = {
-  mode: "Guest",
-  timer: "Persistent",
-  autoSave: true,
-  storage: "LocalStorage"
-};
-console.log("Ready to test");</code></pre>
-                  </div>
-                </div>
-
-                <div>
-                  <h3 class="product-title" data-i18n="item1_title">SIMULASI SNBT</h3>
-                  <p class="product-tagline" data-i18n="item1_tagline">Dikerjakan sendiri, semuanya.</p>
-                </div>
-
-                <button type="button" class="flip-prompt flip-trigger" aria-expanded="false" data-i18n="flip_hint">
-                  KETUK / KLIK UNTUK BALIK TAG ⟳
-                </button>
-              </div>
-
-              <!-- Back Face -->
-              <div class="card-face card-back">
-                <div>
-                  <div class="card-header-bar">
-                    <span class="sku-stamp" data-i18n="item1_sku">SKU: NGW-001</span>
-                    <span class="card-badge badge-solo">DETAILS</span>
-                  </div>
-
-                  <h3 class="back-title" data-i18n="item1_title">SIMULASI SNBT</h3>
-
-                  <ul class="back-spec-list">
-                    <li>
-                      <span class="back-spec-label" data-i18n="item1_role_label">PERAN:</span>
-                      <span data-i18n="item1_role_val">Pengembang Tunggal (Fullstack & UI)</span>
-                    </li>
-                    <li>
-                      <span class="back-spec-label" data-i18n="item1_desc_label">PROJEK APA INI:</span>
-                      <span data-i18n="item1_desc_val">Platform simulasi ujian CBT SNBT/UTBK lengkap dengan mode tamu
-                        tanpa login, timer real-time yang tidak reset saat refresh, penyimpanan otomatis progress di
-                        LocalStorage, sistem penilaian terpisah, serta pembahasan lengkap setiap soal.</span>
-                    </li>
-                    <li>
-                      <span class="back-spec-label" data-i18n="item1_stack_label">STACK TEKNOLOGI:</span>
-                      <span data-i18n="item1_stack_val">TanStack Start (React 19, TypeScript, Vite, Tailwind CSS v4,
-                        TanStack Query, Radix UI, Supabase)</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="back-action-group">
-                  <a href="https://github.com/n4ragentf/simulasi-snbt" target="_blank" rel="noopener noreferrer"
-                    class="btn-merch btn-merch-primary" data-i18n="repo_btn">
-                    Buka GitHub Repo ↗
-                  </a>
-                  <button type="button" class="btn-merch flip-trigger">⟲ Balik Depan</button>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- ITEM 002: GURUPRO AI JOURNAL -->
-          <article class="product-card" tabindex="0" aria-label="Item 002: GuruPro AI Journal">
-            <div class="card-inner">
-              <!-- Front Face -->
-              <div class="card-face card-front">
-                <div class="card-header-bar">
-                  <span class="sku-stamp" data-i18n="item2_sku">SKU: NGW-002</span>
-                  <span class="card-badge badge-team">TEAM PROJECT</span>
-                </div>
-
-                <div class="product-media-box">
-                  <img src="assets/img/gurupro.webp" alt="Tangkapan layar dashboard web aplikasi GuruPro AI Journal"
-                    width="1200" height="887" loading="lazy">
-                </div>
-
-                <div>
-                  <h3 class="product-title" data-i18n="item2_title">GURUPRO AI JOURNAL</h3>
-                  <p class="product-tagline" data-i18n="item2_tagline">Proyek tim. Bagianku: social media management dan
-                    sedikit prompting.</p>
-                </div>
-
-                <button type="button" class="flip-prompt flip-trigger" aria-expanded="false" data-i18n="flip_hint">
-                  KETUK / KLIK UNTUK BALIK TAG ⟳
-                </button>
-              </div>
-
-              <!-- Back Face -->
-              <div class="card-face card-back">
-                <div>
-                  <div class="card-header-bar">
-                    <span class="sku-stamp" data-i18n="item2_sku">SKU: NGW-002</span>
-                    <span class="card-badge badge-team">DETAILS</span>
-                  </div>
-
-                  <h3 class="back-title" data-i18n="item2_title">GURUPRO AI JOURNAL</h3>
-
-                  <ul class="back-spec-list">
-                    <li>
-                      <span class="back-spec-label" data-i18n="item2_role_label">PERAN:</span>
-                      <span data-i18n="item2_role_val">Social Media Management & Sedikit Prompting (proyek tim, tidak
-                        menulis kode)</span>
-                    </li>
-                    <li>
-                      <span class="back-spec-label" data-i18n="item2_desc_label">PROJEK APA INI:</span>
-                      <span data-i18n="item2_desc_val">Aplikasi asisten administrasi untuk guru SMK guna menyusun jurnal
-                        mengajar harian secara otomatis berbasis bantuan AI.</span>
-                    </li>
-                    <li>
-                      <span class="back-spec-label" data-i18n="item2_stack_label">LINK & STATUS:</span>
-                      <span>Prototype v1 (Frontend live di Vercel)</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="back-action-group">
-                  <a href="https://gurupro-ai-journal.vercel.app" target="_blank" rel="noopener noreferrer"
-                    class="btn-merch btn-merch-primary" data-i18n="live_btn">
-                    Buka Web GuruPro ↗
-                  </a>
-                  <a href="https://github.com/novaragroup67/gurupro-ai-journal" target="_blank"
-                    rel="noopener noreferrer" class="btn-merch" data-i18n="repo_btn">
-                    GitHub Repo ↗
-                  </a>
-                  <button type="button" class="btn-merch flip-trigger">⟲ Balik Depan</button>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- ITEM 003: EMPTY SLOT / NEXT DROP -->
-          <article class="empty-slot-card" aria-label="Item 003: In Production Next Drop">
-            <span class="sku-stamp" data-i18n="item3_sku">SKU: NGW-003</span>
-            <div class="empty-stamp" data-i18n="item3_title">IN PRODUCTION / NEXT DROP</div>
-            <p class="product-tagline" data-i18n="item3_tagline">Sedang dikerjakan. Belum rilis.</p>
-            <p style="font-family: var(--font-mono); font-size: 0.85rem; max-width: 260px; margin-top: 10px;"
-              data-i18n="item3_desc_val">
-              Slot kosong untuk proyek berikutnya. Tidak ada data fiktif di sini.
-            </p>
-          </article>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== 3. SIZES (Skills & Languages as Clothing Labels) ==================== -->
-    <section id="sizes" class="section-paper" aria-labelledby="sizes-heading">
-      <div class="container">
-
-        <div class="section-header-wrap">
-          <span class="section-category-tag">SPECIFICATION / TAGS</span>
-          <h2 id="sizes-heading" class="section-title" data-i18n="sizes_heading">SPEC / SIZES</h2>
-          <p class="section-subtitle" data-i18n="sizes_sub">Label spesifikasi kain & kemampuan. Tanpa persentase buatan.
-          </p>
-        </div>
-
-        <div class="sizes-layout">
-
-          <!-- Sewn Clothing Specification Label -->
-          <div class="garment-label-card">
-            <h3 class="label-title" data-i18n="skills_title">KEAHLIAN TEKNIS / SKILLS</h3>
-
-            <div class="label-block">
-              <div class="spec-entry">
-                <span class="spec-name" data-i18n="skill_smm">Social media management</span>
-                <span class="spec-desc" data-i18n="skill_smm_desc">Perencanaan feed, produksi konten, dan pengelolaan
-                  akun.</span>
-                <span class="spec-tag">CORE COMPETENCY</span>
-              </div>
-
-              <div class="spec-entry">
-                <span class="spec-name" data-i18n="skill_web">Website development</span>
-                <span class="spec-desc" data-i18n="skill_web_desc">Membangun tampilan web yang fungsional dan
-                  responsif.</span>
-                <span class="spec-tag">CORE COMPETENCY</span>
-              </div>
-            </div>
-
-            <h3 class="label-title" style="margin-top: 26px;" data-i18n="tools_title">ALAT &amp; PERANGKAT / TOOLS</h3>
-
-            <div class="label-block">
-              <p class="spec-desc" style="margin-bottom: 10px;" data-i18n="tools_desc">Perangkat yang digunakan untuk merancang dan membangun website:</p>
-              <div class="tools-tag-cloud">
-                <span class="tool-chip">Lovable</span>
-                <span class="tool-chip">Figma</span>
-                <span class="tool-chip">Antigravity IDE</span>
-                <span class="tool-chip">VS Code</span>
-                <span class="tool-chip">Claude</span>
-                <span class="tool-chip">Gemini</span>
-                <span class="tool-chip">Windsurf</span>
-              </div>
-            </div>
-
-            <h3 class="label-title" style="margin-top: 26px;" data-i18n="lang_title">BAHASA / LANGUAGES</h3>
-
-            <div class="label-block">
-              <div class="spec-entry">
-                <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                  <span class="spec-name" data-i18n="lang_id_name">Bahasa Indonesia</span>
-                  <span class="spec-tag" data-i18n="lang_id_level">Native</span>
-                </div>
-              </div>
-
-              <div class="spec-entry">
-                <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                  <span class="spec-name" data-i18n="lang_en_name">English</span>
-                  <span class="spec-tag" data-i18n="lang_en_level">B1 (Skor TOEIC: 670)</span>
-                </div>
-              </div>
-
-              <div class="spec-entry">
-                <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                  <span class="spec-name" data-i18n="lang_de_name">Deutsch</span>
-                  <span class="spec-tag" data-i18n="lang_de_level">A1 (basics only)</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Working on Laptop Photo (Screen blurred for privacy) -->
-          <div>
-            <div class="photo-frame-taped">
-              <div class="photo-tape" aria-hidden="true"></div>
-              <img src="assets/img/working.webp"
-                alt="Naara Gentha sedang bekerja di depan laptop menyusun rencana konten" width="1000" height="1777"
-                loading="lazy">
-              <p class="photo-caption" data-i18n="photo_caption_work">Lagi nyusun konten.</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== 4. ABOUT (Care Label & Streetwear Polaroid) ==================== -->
-    <section id="about" class="section-paper" style="background-color: #ECE3CF;" aria-labelledby="about-heading">
-      <div class="container">
-
-        <div class="section-header-wrap">
-          <span class="section-category-tag">WASH INSTRUCTIONS</span>
-          <h2 id="about-heading" class="section-title" data-i18n="about_heading">CARE LABEL / ABOUT</h2>
-        </div>
-
-        <div class="about-grid">
-
-          <!-- Care Label Card -->
-          <div class="care-label-box">
-            <p class="lead-quote" data-i18n="about_lead">"Aku suka hal-hal yang aneh."</p>
-
-            <table class="care-table" aria-label="Instruksi Perawatan Produk Naara">
-              <tbody>
-                <tr>
-                  <td data-i18n="care_name_label">NAMA PRODUK:</td>
-                  <td data-i18n="care_name_val">Naara Gentha Shypra Wardana</td>
-                </tr>
-                <tr>
-                  <td data-i18n="care_status_label">STATUS:</td>
-                  <td data-i18n="care_status_val">Siswa RPL (Rekayasa Perangkat Lunak)</td>
-                </tr>
-                <tr>
-                  <td data-i18n="care_wash_label">CARA MERAWAT:</td>
-                  <td data-i18n="care_wash_val">Cuci bersama hal-hal aneh lainnya.</td>
-                </tr>
-                <tr>
-                  <td data-i18n="care_dry_label">PENGERINGAN:</td>
-                  <td data-i18n="care_dry_val">Keringkan di bawah cahaya matahari langsung & ide-ide nyeleneh.</td>
-                </tr>
-              </tbody>
-            </table>
-
-            <!-- WEIRD THINGS I LIKE (Filled with Naara's direct input) -->
-            <div style="border-top: var(--border-thick); padding-top: 20px; margin-top: 20px;">
-              <h3 style="font-family: var(--font-display); font-size: 1.15rem; margin-bottom: 10px;"
-                data-i18n="weird_title">
-                WEIRD THINGS I LIKE:
-              </h3>
-              <ul class="weird-things-list">
-                <li class="weird-tag-item" data-i18n="weird_item1">Glazer harum manis &amp; Frank Ocean</li>
-                <li class="weird-tag-item" data-i18n="weird_item2">Mempunyai banyak obsesi</li>
-                <li class="weird-tag-item" data-i18n="weird_item3">Freaky</li>
-              </ul>
-            </div>
-
-          </div>
-
-          <!-- Visuals: Taped Polaroid + Duotone Candid -->
-          <div class="visuals-stack">
-
-            <!-- Mirror Selfie as Taped Polaroid (Cropped tightly to Naara only) -->
-            <div class="polaroid-card">
-              <div class="photo-tape" aria-hidden="true" style="top: -10px; width: 90px; height: 22px;"></div>
-              <img src="assets/img/mirror.webp"
-                alt="Foto polaroid mirror selfie Naara Gentha mengenakan bucket hat dan sweater cokelat" width="600"
-                height="1367" loading="lazy">
-              <p class="polaroid-text" data-i18n="polaroid_label">Naara Gentha — Mirror Polaroid</p>
-            </div>
-
-            <!-- Blurry Candid in Duotone (Ink #121212 + Signal #FF3B1D) -->
-            <div class="duotone-candid-card">
-              <img src="assets/img/blur.webp" alt="Foto candid Naara Gentha dalam efek duotone merah signal dan hitam"
-                width="800" height="533" loading="lazy">
-              <p class="candid-caption" data-i18n="candid_caption">Buram. Tetap aku.</p>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== 5. REVIEWS (Zero-state Streetwear Box) ==================== -->
-    <section id="reviews" class="section-signal" aria-labelledby="reviews-heading">
-      <div class="container">
-
-        <div class="reviews-box">
-          <div class="reviews-badge" data-i18n="reviews_count">ULASAN (0)</div>
-          <p class="reviews-message" data-i18n="reviews_empty">
-            belum ada. Jadilah yang pertama, DM di Instagram.
-          </p>
-          <a href="https://instagram.com/naaragenthasikma67" target="_blank" rel="noopener noreferrer"
-            class="btn-merch btn-merch-primary" data-i18n="reviews_cta">
-            Kirim Ulasan via Instagram DM ↗
-          </a>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== 6. CONTACT (Shipping Manifest Label) ==================== -->
-    <section id="contact" class="section-paper" aria-labelledby="contact-heading">
-      <div class="container">
-
-        <div class="shipping-manifest">
-
-          <div class="shipping-header">
-            <h2 id="contact-heading" data-i18n="contact_heading">SHIPPING LABEL / CONTACT</h2>
-            <span class="shipping-badge" data-i18n="service_val">EXPRESS COLLABORATION</span>
-          </div>
-
-          <div class="shipping-grid">
-            <div class="shipping-cell">
-              <span class="shipping-label" data-i18n="ship_to_label">KIRIM KE (SHIP TO):</span>
-              <span class="shipping-value" data-i18n="ship_to_val">Kamu (Teman / Guru / Dosen / Rekan Kerja)</span>
-            </div>
-
-            <div class="shipping-cell">
-              <span class="shipping-label" data-i18n="from_label">DARI (FROM):</span>
-              <span class="shipping-value" data-i18n="from_val">Naara Gentha Shypra Wardana</span>
-            </div>
-          </div>
-
-          <!-- Email with tactile Copy Button -->
-          <div class="shipping-email-row">
-            <span class="shipping-label">EMAIL ADDRESS:</span>
-            <div class="email-copy-container">
-              <span class="email-display-text" id="email-address">naaragentha@gmail.com</span>
-              <button type="button" class="btn-copy" id="copy-email-btn" aria-label="Salin alamat email ke papan klip"
-                data-i18n="copy_email">
-                SALIN
-              </button>
-            </div>
-          </div>
-
-          <!-- Direct Channels (Strictly Instagram & GitHub; No phone/address/school) -->
-          <div class="channels-row">
-            <span class="shipping-label" style="width: 100%;" data-i18n="contact_direct">HUBUNGI LANGSUNG:</span>
-
-            <a href="https://instagram.com/naaragenthasikma67" target="_blank" rel="noopener noreferrer"
-              class="channel-tag-btn">
-              <span>[IG] Instagram:</span>
-              <span>@naaragenthasikma67 ↗</span>
-            </a>
-
-            <a href="https://github.com/n4ragentf" target="_blank" rel="noopener noreferrer" class="channel-tag-btn">
-              <span>[GH] GitHub:</span>
-              <span>n4ragentf ↗</span>
-            </a>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-  </main>
-
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="site-footer">
-    <div class="footer-content">
-      <p class="footer-thanks-line" data-i18n="footer_thanks">Terima kasih · Thank you · Danke</p>
-      <div>
-        <span class="footer-bye-badge" data-i18n="footer_bye">Tschüss!</span>
-      </div>
-      <p class="footer-legal">
-        &copy; 2026 Naara Gentha Shypra Wardana. <span data-i18n="footer_drop">DROP 001 / BATCH 2026. SEMUA HAK CIPTA
-          DILINDUNGI.</span>
-      </p>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="js/i18n.js"></script>
-  <script src="js/main.js"></script>
+<nav aria-label="Menu">
+<div><a href="#drop">Drop</a><a href="#items">Items</a><a href="#about" data-id="Tentang" data-en="About">Tentang</a><a href="#contact" data-id="Kontak" data-en="Contact">Kontak</a></div>
+<div><button type="button" data-lang="id" aria-pressed="true">ID</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
+</nav>
+
+<section class="hero" id="drop">
+<div>
+<h1><span>Naara</span><span>Gentha</span></h1>
+<p class="sub" data-id="Anak RPL. Ngurus sosmed, bikin website." data-en="RPL kid. I run socials and build sites.">Anak RPL. Ngurus sosmed, bikin website.</p>
+</div>
+<div class="stage">
+<img class="portrait" src="assets/img/portrait.webp" alt="Foto formal Naara berseragam dengan latar merah">
+<div class="gift"><span>make your presence a gift that give through memories you leave behind</span><b>To: you / From: Naara</b></div>
+<span class="sticker" style="left:2%;top:2%;background:var(--signal);transform:rotate(-8deg)">100% WEIRD</span>
+<span class="sticker" style="left:58%;top:52%;background:var(--acid);transform:rotate(6deg)">HALLO!</span>
+<span class="sticker" style="left:4%;top:80%;background:#fff;transform:rotate(3deg)">LIMITED: ONLY 1</span>
+<span class="sticker" style="left:50%;top:84%;background:var(--signal);transform:rotate(-5deg)">CODE + CONTENT</span>
+</div>
+</section>
+
+<section class="ink" id="items">
+<h2>Items</h2>
+<div class="grid">
+<article class="tag"><div class="card">
+<div class="face front">
+<div class="top"><span class="chip">SKU: NGW-001</span><span class="chip sig" data-id="Ketuk buat balik" data-en="Tap to flip">Ketuk buat balik</span></div>
+<h3>Simulasi SNBT</h3>
+<p data-id="Dikerjain sendiri, semuanya." data-en="Built it solo. Every bit.">Dikerjain sendiri, semuanya.</p>
+<p data-id="Simulasi ujian CBT SNBT/UTBK. Bisa tanpa login, timer gak reset pas di-refresh." data-en="A CBT-style SNBT/UTBK exam sim. No login needed, and the timer won't reset on refresh.">Simulasi ujian CBT SNBT/UTBK. Bisa tanpa login, timer gak reset pas di-refresh.</p>
+<button class="btn pri flipbtn" type="button" aria-expanded="false" data-id="Intip detail" data-en="Peep the details">Intip detail</button>
+</div>
+<div class="face back">
+<div class="top"><span class="chip">SKU: NGW-001</span><span class="chip sig" data-id="Detail" data-en="Details">Detail</span></div>
+<h3>Simulasi SNBT</h3>
+<dl><dt data-id="Peran:" data-en="Role:">Peran:</dt><dd data-id="Semuanya aku yang ngerjain, dari UI sampai fullstack." data-en="All me, from UI to fullstack.">Semuanya aku yang ngerjain, dari UI sampai fullstack.</dd>
+<dt data-id="Isinya:" data-en="What it is:">Isinya:</dt><dd data-id="Simulasi ujian CBT SNBT/UTBK. Bisa tanpa login, progres kesimpen di LocalStorage, timer gak reset pas refresh, plus pembahasan tiap soal." data-en="A CBT-style SNBT/UTBK exam sim. Guest mode, progress saved in LocalStorage, a timer that survives reloads, and full answer reviews.">Simulasi ujian CBT SNBT/UTBK. Bisa tanpa login, progres kesimpen di LocalStorage, timer gak reset pas refresh, plus pembahasan tiap soal.</dd>
+<dt data-id="Teknologi:" data-en="Tech stack:">Teknologi:</dt><dd>TanStack Start, React 19, TypeScript, Vite, Tailwind CSS v4, TanStack Query, Radix UI, Supabase</dd></dl>
+<hr>
+<div class="acts"><a class="btn pri" href="https://github.com/n4ragentf/simulasi-snbt" target="_blank" rel="noopener" data-id="Buka repo GitHub &#8599;" data-en="Open GitHub repo &#8599;">Buka repo GitHub &#8599;</a><button class="btn flipbtn" type="button" aria-expanded="true" data-id="&#8635; Balik depan" data-en="&#8635; Flip back">&#8635; Balik depan</button></div>
+</div>
+</div></article>
+
+<article class="tag"><div class="card">
+<div class="face front">
+<div class="top"><span class="chip">SKU: NGW-002</span><span class="chip sig" data-id="Ketuk buat balik" data-en="Tap to flip">Ketuk buat balik</span></div>
+<h3>GuruPro AI Journal</h3>
+<img src="assets/img/gurupro.webp" alt="Dashboard GuruPro AI Journal" loading="lazy">
+<p data-id="Proyek tim. Aku pegang sosmed sama sedikit prompting." data-en="Team project. I handled the socials and a lil' prompting.">Proyek tim. Aku pegang sosmed sama sedikit prompting.</p>
+<button class="btn pri flipbtn" type="button" aria-expanded="false" data-id="Intip detail" data-en="Peep the details">Intip detail</button>
+</div>
+<div class="face back">
+<div class="top"><span class="chip">SKU: NGW-002</span><span class="chip sig" data-id="Detail" data-en="Details">Detail</span></div>
+<h3>GuruPro AI Journal</h3>
+<dl><dt data-id="Peran:" data-en="Role:">Peran:</dt><dd data-id="Sosmed management dan sedikit prompting (gak nulis kode)." data-en="Socials + a lil' prompting (no code from me).">Sosmed management dan sedikit prompting (gak nulis kode).</dd>
+<dt data-id="Isinya:" data-en="What it is:">Isinya:</dt><dd data-id="Aplikasi web asisten administrasi buat guru SMK: bikin jurnal mengajar harian otomatis dengan bantuan AI." data-en="A teacher admin web app that helps vocational school teachers draft daily teaching journals with AI.">Aplikasi web asisten administrasi buat guru SMK: bikin jurnal mengajar harian otomatis dengan bantuan AI.</dd>
+<dt data-id="Status:" data-en="Status:">Status:</dt><dd data-id="Prototype v1 (frontend live di Vercel)" data-en="Prototype v1 (frontend live on Vercel)">Prototype v1 (frontend live di Vercel)</dd></dl>
+<hr>
+<div class="acts"><a class="btn pri" href="https://gurupro-ai-journal.vercel.app" target="_blank" rel="noopener" data-id="Buka app GuruPro &#8599;" data-en="Open GuruPro app &#8599;">Buka app GuruPro &#8599;</a><a class="btn" href="https://github.com/novaragroup67/gurupro-ai-journal" target="_blank" rel="noopener" data-id="Buka repo GitHub &#8599;" data-en="Open GitHub repo &#8599;">Buka repo GitHub &#8599;</a><button class="btn flipbtn" type="button" aria-expanded="true" data-id="&#8635; Balik depan" data-en="&#8635; Flip back">&#8635; Balik depan</button></div>
+</div>
+</div></article>
+
+<article class="tag empty">
+<span class="chip">SKU: NGW-003</span>
+<div class="stamp" data-id="Lagi dikerjain / next drop" data-en="Cooking / next drop">Lagi dikerjain / next drop</div>
+<p data-id="Slot kosong buat drop berikutnya. Gak ada proyek karangan di sini." data-en="Empty slot, next drop loading. No fake projects here.">Slot kosong buat drop berikutnya. Gak ada proyek karangan di sini.</p>
+</article>
+</div>
+</section>
+
+<section id="sizes">
+<h2>Sizes</h2>
+<div class="labels">
+<div class="lab"><i>SM</i><span data-id="Social media management" data-en="Social media management">Social media management</span></div>
+<div class="lab"><i>WD</i><span data-id="Website development" data-en="Website development">Website development</span></div>
+</div>
+<div class="labels">
+<div class="lab" style="background:var(--paper)"><i>XL</i><span>Indonesia<small data-id="bahasa ibu" data-en="native">bahasa ibu</small></span></div>
+<div class="lab" style="background:var(--paper)"><i>M</i><span>English<small>B1, TOEIC 670</small></span></div>
+<div class="lab" style="background:var(--paper)"><i>XS</i><span>Deutsch<small data-id="A1, dasar banget" data-en="A1, super basic">A1, dasar banget</small></span></div>
+</div>
+<div class="tools"><span class="tool" role="img" aria-label="Lovable" style="background:var(--acid);"><img src="assets/logos/lovable.svg" alt="" onerror="this.nextElementSibling.style.display='grid';this.remove()"><b>L</b></span><span class="tool" role="img" aria-label="Figma" style="background:var(--signal);"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539zm-.024-7.51a3.023 3.023 0 0 0-3.019 3.019c0 1.665 1.365 3.019 3.044 3.019 1.705 0 3.093-1.376 3.093-3.068v-2.97H8.148zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49zm-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h.098c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-.098z"/></svg></span><span class="tool" role="img" aria-label="Antigravity IDE" style="background:#fff;"><img src="assets/logos/antigravity.svg" alt="" onerror="this.nextElementSibling.style.display='grid';this.remove()"><b>A</b></span><span class="tool" role="img" aria-label="VS Code" style="background:var(--ink);color:var(--paper);"><img src="assets/logos/vscode.svg" alt="" onerror="this.nextElementSibling.style.display='grid';this.remove()"><b>VS</b></span><span class="tool" role="img" aria-label="Claude" style="background:var(--acid);"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></svg></span><span class="tool" role="img" aria-label="Gemini" style="background:var(--signal);"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81"/></svg></span><span class="tool" role="img" aria-label="Windsurf" style="background:#fff;"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M23.55 5.067c-1.2038-.002-2.1806.973-2.1806 2.1765v4.8676c0 .972-.8035 1.7594-1.7597 1.7594-.568 0-1.1352-.286-1.4718-.7659l-4.9713-7.1003c-.4125-.5896-1.0837-.941-1.8103-.941-1.1334 0-2.1533.9635-2.1533 2.153v4.8957c0 .972-.7969 1.7594-1.7596 1.7594-.57 0-1.1363-.286-1.4728-.7658L.4076 5.1598C.2822 4.9798 0 5.0688 0 5.2882v4.2452c0 .2147.0656.4228.1884.599l5.4748 7.8183c.3234.462.8006.8052 1.3509.9298 1.3771.313 2.6446-.747 2.6446-2.0977v-4.893c0-.972.7875-1.7593 1.7596-1.7593h.003a1.798 1.798 0 0 1 1.4718.7658l4.9723 7.0994c.4135.5905 1.05.941 1.8093.941 1.1587 0 2.1515-.9645 2.1515-2.153v-4.8948c0-.972.7875-1.7594 1.7596-1.7594h.194a.22.22 0 0 0 .2204-.2202v-4.622a.22.22 0 0 0-.2203-.2203Z"/></svg></span></div>
+<figure class="work"><img src="assets/img/working.webp" alt="Naara mengetik di laptop saat menyusun rencana konten" loading="lazy"><figcaption data-id="Lagi nyusun konten." data-en="Plotting content.">Lagi nyusun konten.</figcaption></figure>
+</section>
+
+<section id="about">
+<span class="wash" data-id="Petunjuk cuci" data-en="Wash instructions">Petunjuk cuci</span>
+<h2 data-id="Label Perawatan / Tentang" data-en="Care Label / About">Label Perawatan / Tentang</h2>
+<div class="about">
+<div class="carecard">
+<h3 class="lead" data-id="Aku suka hal-hal aneh." data-en="I'm into weird stuff.">Aku suka hal-hal aneh.</h3>
+<table class="wt">
+<tr><th data-id="Produk / Nama:" data-en="Product / Name:">Produk / Nama:</th><td>Naara Gentha Shypra Wardana</td></tr>
+<tr><th>Status:</th><td data-id="Anak RPL (Rekayasa Perangkat Lunak)" data-en="RPL student (Software Engineering)">Anak RPL (Rekayasa Perangkat Lunak)</td></tr>
+<tr><th data-id="Cuci bareng:" data-en="Wash with:">Cuci bareng:</th><td data-id="Hal-hal aneh lainnya." data-en="Other weird things.">Hal-hal aneh lainnya.</td></tr>
+<tr><th data-id="Jemur:" data-en="Drying:">Jemur:</th><td data-id="Di bawah matahari langsung dan ide-ide nyeleneh." data-en="Dry under open sun and loud ideas.">Di bawah matahari langsung dan ide-ide nyeleneh.</td></tr>
+</table>
+<h4 class="wtitle" data-id="Hal aneh yang kusuka:" data-en="Weird things I like:">Hal aneh yang kusuka:</h4>
+<ul class="weird"><li data-id="Glazer Harum Manis (band) dan Frank Ocean (solo)" data-en="Glazing Harum Manis (band) and Frank Ocean (solo)">Glazer Harum Manis (band) dan Frank Ocean (solo)</li><li data-id="Punya banyak obsesi" data-en="Got too many obsessions">Punya banyak obsesi</li><li>Freaky</li></ul>
+<div class="recs"><figure class="rec"><div class="sl"><img src="assets/img/blonde.jpg" alt="Sampul album Blonde, Frank Ocean" loading="lazy" onerror="this.remove()">Blonde</div><figcaption>Frank Ocean</figcaption></figure><figure class="rec"><div class="sl"><img src="assets/img/harum-manis.jpg" alt="Sampul album Harum Manis" loading="lazy" onerror="this.remove()">Harum Manis</div><figcaption>Harum Manis</figcaption></figure></div>
+</div>
+<div class="pics">
+<div class="pola"><img src="assets/img/mirror.webp" alt="Naara memakai topi bucket dan sweter cokelat, foto di depan cermin" loading="lazy"></div>
+<div class="duo"><img src="assets/img/blur.webp" alt="Foto buram Naara menunduk" loading="lazy"><p data-id="Buram. Tetap aku." data-en="Out of focus. Still me.">Buram. Tetap aku.</p></div>
+</div>
+</div>
+</section>
+
+<section class="rev">
+<h2 data-id="Ulasan (0)" data-en="Reviews (0)">Ulasan (0)</h2>
+<p class="revp" data-id="Belum ada nih. Jadi yang pertama dong, DM aja di IG." data-en="None yet. Be the first, slide into my DMs.">Belum ada nih. Jadi yang pertama dong, DM aja di IG.</p>
+<a class="btn pri" href="https://instagram.com/naaragenthasikma67" target="_blank" rel="noopener" data-id="Kirim ulasan lewat DM Instagram &#8599;" data-en="Send review via Instagram DM &#8599;">Kirim ulasan lewat DM Instagram &#8599;</a>
+</section>
+
+<section class="ink" id="contact">
+<div class="ship">
+<div class="sh"><h2 data-id="Label Pengiriman / Kontak" data-en="Shipping Label / Contact">Label Pengiriman / Kontak</h2><span class="xp" data-id="Kolaborasi Kilat" data-en="Express Collaboration">Kolaborasi Kilat</span></div>
+<div class="cells two"><div><b class="lb" data-id="Dikirim ke:" data-en="Ship to:">Dikirim ke:</b><p data-id="Kamu (Teman / Guru / Dosen / Rekan Kerja)" data-en="You (Friend / Teacher / Lecturer / Collaborator)">Kamu (Teman / Guru / Dosen / Rekan Kerja)</p></div><div><b class="lb" data-id="Dari:" data-en="From:">Dari:</b><p>Naara Gentha Shypra Wardana</p></div></div>
+<div class="cells"><b class="lb" data-id="Alamat email:" data-en="Email address:">Alamat email:</b><div class="em"><span>naaragentha@gmail.com</span><button type="button" id="copy" data-id="Salin" data-en="Copy">Salin</button></div></div>
+<div class="cells"><b class="lb" data-id="Hubungi langsung:" data-en="Direct channels:">Hubungi langsung:</b><div class="chs"><a href="https://instagram.com/naaragenthasikma67" target="_blank" rel="noopener">[IG] Instagram: @naaragenthasikma67 &#8599;</a><a href="https://github.com/n4ragentf" target="_blank" rel="noopener">[GH] GitHub: n4ragentf &#8599;</a></div></div>
+</div>
+</section>
+
+<footer>
+<p>Terima kasih. Thank you. Danke.</p>
+<p>Tschüss! &copy; 2026 Naara Gentha</p>
+</footer>
+
+<script>
+(function(){
+var $=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+function setLang(l){
+ $('[data-id]').forEach(function(e){e.textContent=e.getAttribute('data-'+l)});
+ $('[data-lang]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.lang===l)});
+ document.documentElement.lang=l;
+ try{localStorage.setItem('lang',l)}catch(e){}
+}
+$('[data-lang]').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang)})});
+var saved='id';try{saved=localStorage.getItem('lang')||'id'}catch(e){}
+if(saved==='en')setLang('en');
+$('.tag').forEach(function(t){
+ function flip(){var on=t.classList.toggle('flipped');
+  $('.flipbtn',t).forEach(function(x){x.setAttribute('aria-expanded',x.closest('.back')?on:!on)});
+  setTimeout(function(){var f=$((on?'.back':'.front')+' .flipbtn',t)[0];if(f)f.focus({preventScroll:true})},matchMedia('(prefers-reduced-motion:reduce)').matches?0:420)}
+ $('.front',t).forEach(function(f){f.addEventListener('click',flip)});
+ $('.back .flipbtn',t).forEach(function(x){x.addEventListener('click',flip)});
+});
+var z=5;
+$('.sticker').forEach(function(el){
+ var sx,sy,ox,oy,drag=false;
+ el.addEventListener('pointerdown',function(e){drag=true;el.setPointerCapture(e.pointerId);sx=e.clientX;sy=e.clientY;ox=el.offsetLeft;oy=el.offsetTop;el.style.zIndex=++z});
+ el.addEventListener('pointermove',function(e){if(!drag)return;var p=el.parentElement;
+  el.style.left=Math.max(0,Math.min(p.clientWidth-el.offsetWidth,ox+e.clientX-sx))+'px';
+  el.style.top=Math.max(0,Math.min(p.clientHeight-el.offsetHeight,oy+e.clientY-sy))+'px'});
+ el.addEventListener('pointerup',function(){drag=false});
+ el.addEventListener('pointercancel',function(){drag=false});
+});
+var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+var hero=document.querySelector('.hero'),h1=hero.querySelector('h1');
+if(!rm){hero.addEventListener('pointermove',function(e){var r=hero.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;h1.style.setProperty('--sx',(-x*22).toFixed(1)+'px');h1.style.setProperty('--sy',(-y*22).toFixed(1)+'px')})}
+var io=(!rm&&'IntersectionObserver' in window)?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var t=e.target;t.classList.remove('pre');t.classList.add('drop');io.unobserve(t)}})},{threshold:.25}):null;
+$('.tag').forEach(function(t,i){if(io){t.classList.add('pre');t.style.animationDelay=(i*.15)+'s';io.observe(t)}});
+$('.tool').forEach(function(t){t.addEventListener('click',function(){t.classList.toggle('spin')})});
+var c=document.getElementById('copy');
+c.addEventListener('click',function(){
+ var l=document.documentElement.lang,done=l==='en'?'Copied!':'Tersalin!',back=c.getAttribute('data-'+l);
+ function ok(){c.textContent=done;setTimeout(function(){c.textContent=back},1600)}
+ if(navigator.clipboard){navigator.clipboard.writeText('naaragentha@gmail.com').then(ok,function(){})}
+});
+})();
+</script>
 </body>
-
 </html>
